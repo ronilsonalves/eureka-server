@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  eurekaserver:
+    tty: true
+    container_name: eureka_server
+    build: .
+    ports:
+      - "8761:8761"
+    networks:
+      - servers
+
+networks:
+  servers:
+    driver: bridge
